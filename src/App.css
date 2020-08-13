@@ -3,24 +3,34 @@
   text-align: center;
   width: 3em;
   font-size: 2em;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  margin: 1em;
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+  box-shadow: 0 8px 16px 0 rgba(155, 150, 150, 0.719);
+  color: wheat;
+  background-color: gray;
+  margin: 0.5em;
   user-select: none;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
-
 .activeCard {
   color: red;
   background: pink;
 }
 
-/* --------------------------------------------- Defualt css --------------------------------------------- */
-/*.App {
+.App {
+  text-align: center;
+}
+
+/* --------------------------------------------- Defualt react --------------------------------------------- */
+.App {
   text-align: center;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  position: relative;
+  width: 400px;
+  height: 200px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -38,6 +48,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.bodyStd {
+  background-color: #282c34;
+  color: white;
 }
 
 .App-link {
@@ -51,4 +67,4 @@
   to {
     transform: rotate(360deg);
   }
-}*/
+}
