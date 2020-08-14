@@ -9,8 +9,13 @@ const word3 = "Image";
 const word4 = "Engine";
 const word5 = "ability";
 
+function refreshPage() {
+  window.location.reload(false);
+}
+
 function App() {
 var x = Math.floor(Math.random() * 4);
+//var x = 0;
   if(x == 0) {
     return (
       <div id="App">
@@ -25,6 +30,7 @@ var x = Math.floor(Math.random() * 4);
         {
           <WordCard value={word1}/>
         }
+        <button onClick={refreshPage}>Click to reload the Word!</button>
         <p>
           __________________________________________________________
         </p>
@@ -33,6 +39,7 @@ var x = Math.floor(Math.random() * 4);
         </p>
       </header>
       </div>
+      
     );
   }
   if(x == 1) {
@@ -49,6 +56,7 @@ var x = Math.floor(Math.random() * 4);
         {
           <WordCard value={word2}/>
         }
+        <button onClick={refreshPage}>Click to reload the Word!</button>
         <p>
           __________________________________________________________
         </p>
@@ -73,6 +81,7 @@ var x = Math.floor(Math.random() * 4);
         {
           <WordCard value={word3}/>
         }
+        <button onClick={refreshPage}>Click to reload the Word!</button>
         <p>
           __________________________________________________________
         </p>
@@ -97,6 +106,7 @@ var x = Math.floor(Math.random() * 4);
         {
           <WordCard value={word4}/>
         }
+        <button onClick={refreshPage}>Click to reload the Word!</button>
         <p>
           __________________________________________________________
         </p>
@@ -121,6 +131,7 @@ var x = Math.floor(Math.random() * 4);
         {
           <WordCard value={word5}/>
         }
+        <button onClick={refreshPage}>Click to reload the Word!</button>
         <p>
           __________________________________________________________
         </p>
