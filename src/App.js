@@ -13,7 +13,7 @@ function App() {
 var x = Math.floor(Math.random() * 4);
   if(x == 0) {
     return (
-      <div className="App">
+      <div id="App">
         <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
