@@ -29,7 +29,7 @@ export default function WordCard(props){
             if(guess == state.word) {
                 console.log('yeah!, the page will be reload')
                 setState({...state, completed: true})
-                alertWin()
+                alertWin(props.value)
                 window.location.reload(false);
             }
             else {
@@ -52,19 +52,19 @@ export default function WordCard(props){
 }
 
 
-function alertWin() {
+function alertWin(word) {
     var x = Math.floor(Math.random() * 4);
     if(x == 0) {
-        alert("Congratulations !");
+        alert("Congratulations !" + "\nThe word is:" + word);
     }
     if(x == 1) {
-        alert("This calls for celebrating! Congratulations !");
+        alert("This calls for celebrating! Congratulations !" + "\nThe word is: " + word);
     }
     if(x == 2) {
-        alert("You did it! So proud of you!");
+        alert("You did it! So proud of you!"+ "\nThe word is: " + word);
     }
     if(x == 3) {
-        alert("Well done !");
+        alert("Well done !"+ "\nThe word is: " + word);
     }
 }
 
