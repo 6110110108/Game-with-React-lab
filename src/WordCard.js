@@ -2,13 +2,18 @@ import React, { useState } from 'react';
 import _, { attempt } from 'lodash';
 import CharacterCard from './CharacterCard';
 
+
+var temp = 3; //
+var word = ""; //
+var reload = 0;
 const prepareStateFromWord = given_word => {
     let word = given_word.toUpperCase()
     let chars = _.shuffle(Array.from(word))
     return {
         word,
         chars,
-        attempt: 1, 
+        attempt: 1,
+        count: 3, //
         guess: '', 
         complete: false 
     }
@@ -34,21 +39,46 @@ export default function WordCard(props){
             }
             else {
                 console.log('rest, next attempt')
+                state.count -= 1;
                 setState({...state, guess: '' , attempt: state.attempt + 1})
                 alertLose()
             }
         }
+        temp = state.count;
+        if(temp == 0){
+            word = props.value;
+        }
+        if(reload >= 1) {
+            reload = 0;
+            window.location.reload(true);
+        }
     }
-
-    return (
-        <div>
-            {
-                state.chars.map((c, i) => 
-                    <CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>
-                ) 
-            }
-        </div>
-    );
+    if(temp == 0){
+        reload++;
+        return (
+            <div>
+                    <div id="Result">The word is: {word}</div>
+                    {
+                    state.chars.map((c, i) => 
+                        <CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>
+                    ) 
+                }
+            </div>
+        );
+    }
+    else {
+        return (
+            <div>
+                    <div id="Result">You can try : {temp} round.</div>
+                    {
+                    state.chars.map((c, i) => 
+                        <CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>
+                    ) 
+                }
+            </div>
+        );
+    }
+    
 }
 
 
