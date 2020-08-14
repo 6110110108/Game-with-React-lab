@@ -29,13 +29,13 @@ export default function WordCard(props){
             if(guess == state.word) {
                 console.log('yeah!, the page will be reload')
                 setState({...state, completed: true})
-                myFunctionAlert()
+                alertWin()
                 window.location.reload(false);
-
             }
             else {
                 console.log('rest, next attempt')
                 setState({...state, guess: '' , attempt: state.attempt + 1})
+                alertLose()
             }
         }
     }
@@ -52,7 +52,7 @@ export default function WordCard(props){
 }
 
 
-function myFunctionAlert() {
+function alertWin() {
     var x = Math.floor(Math.random() * 4);
     if(x == 0) {
         alert("Congratulations !");
@@ -68,3 +68,18 @@ function myFunctionAlert() {
     }
 }
 
+function alertLose() {
+    var x = Math.floor(Math.random() * 4);
+    if(x == 0) {
+        alert("You can do it dude :)");
+    }
+    if(x == 1) {
+        alert("Let's try again");
+    }
+    if(x == 2) {
+        alert("keep fighting ");
+    }
+    if(x == 3) {
+        alert("keep going");
+    }
+}
