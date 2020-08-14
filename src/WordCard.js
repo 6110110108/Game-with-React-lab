@@ -15,7 +15,6 @@ const prepareStateFromWord = given_word => {
 }
 
 export default function WordCard(props){
-
     const [state, setState] = useState(prepareStateFromWord(props.value))
 
     const activationHandler = c => {
@@ -28,10 +27,11 @@ export default function WordCard(props){
 
         if(guess.length == state.word.length) {
             if(guess == state.word) {
-                console.log('yeah!, the page will be restart')
+                console.log('yeah!, the page will be reload')
                 setState({...state, completed: true})
+                myFunctionAlert()
                 window.location.reload(false);
-                //printFollowers("Nice")
+
             }
             else {
                 console.log('rest, next attempt')
@@ -51,7 +51,20 @@ export default function WordCard(props){
     );
 }
 
-function printFollowers(followersSum) {
-    document.getElementById('App').innerHTML = followersSum;
-    console.log(followersSum); // you can do print followersSum wherever you want
-  }
+
+function myFunctionAlert() {
+    var x = Math.floor(Math.random() * 4);
+    if(x == 0) {
+        alert("Congratulations !");
+    }
+    if(x == 1) {
+        alert("This calls for celebrating! Congratulations !");
+    }
+    if(x == 2) {
+        alert("You did it! So proud of you!");
+    }
+    if(x == 3) {
+        alert("Well done !");
+    }
+}
+
