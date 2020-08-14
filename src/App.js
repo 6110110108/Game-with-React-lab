@@ -34,7 +34,7 @@ function App() {
         {
           <WordCard value={word}/>
         }
-        <button onClick={refreshPage}>Click to reload the Word!</button>
+        <button onClick={refreshPage} class="button">Click to reload the Word!</button> 
         <p>
           __________________________________________________________
         </p>
