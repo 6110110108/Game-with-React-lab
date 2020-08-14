@@ -17,14 +17,14 @@ switch (rand) {
   case 7: word = "Vanilla"; break;
   case 8: word = "Laptop"; break;
   case 9: word = "Digital"; break;
-  case 10: word = "Computer"; break;
+  case 10: word = "Motor"; break;
 }
 
 function App() {
     return (
       <div id="App">
         <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" className="App-logo" alt="logo" />
         <p>
         🙌 Word Game ! Test your English vocabulary 🙌
         </p>
