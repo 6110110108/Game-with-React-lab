@@ -8,9 +8,9 @@ const prepareStateFromWord = given_word => {
     return {
         word,
         chars,
-        attempt: 1, // เล่นครั้งที่เท่าไหร่
-        guess: '', // คลิกไปกี่ครั้งแล้ว
-        complete: false // การเล่นจบแล้วหรือยัง
+        attempt: 1, 
+        guess: '', 
+        complete: false 
     }
 }
 
@@ -55,7 +55,7 @@ export default function WordCard(props){
 function alertWin(word) {
     var x = Math.floor(Math.random() * 4);
     if(x == 0) {
-        alert("Congratulations !" + "\nThe word is:" + word);
+        alert("Congratulations !" + "\nThe word is: " + word);
     }
     if(x == 1) {
         alert("This calls for celebrating! Congratulations !" + "\nThe word is: " + word);
