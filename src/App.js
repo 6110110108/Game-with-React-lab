@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import WordCard from './WordCard';
 
@@ -17,7 +16,7 @@ switch (rand) {
   case 7: word = "Vanilla"; break;
   case 8: word = "Laptop"; break;
   case 9: word = "Digital"; break;
-  case 10: word = "Motor"; break;
+  case 10: word = "Robot"; break;
 }
 
 function App() {
