@@ -14,7 +14,7 @@ function refreshPage() {
 }
 
 function App() {
-var x = Math.floor(Math.random() * 4);
+var x = Math.floor(Math.random() * 5);
 //var x = 0;
   if(x == 0) {
     return (
