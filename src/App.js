@@ -3,12 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import WordCard from './WordCard';
 
-function refreshPage() {
-  window.location.reload(false);
-}
-
 var word = "";
-var rand = Math.floor(Math.random() * 5);
+var rand = Math.floor(Math.random() * 11);
 
 switch (rand) {
   case 0:
@@ -24,7 +20,25 @@ switch (rand) {
     word = "Engine";
     break;
   case 4:
-    word = "ability";
+    word = "Signal";
+    break;
+  case 5:
+    word = "Apple";
+    break;
+  case 6:
+    word = "Market";
+    break;
+  case 7:
+    word = "Vanilla";
+    break;
+  case 8:
+    word = "Laptop";
+    break;
+  case 9:
+    word = "Digital";
+    break;
+  case 10:
+    word = "Computer";
     break;
 }
 
@@ -53,6 +67,10 @@ function App() {
       </div>
       
     );
-  }
+}
+
+function refreshPage() {
+    window.location.reload(false);
+}
 
 export default App;
