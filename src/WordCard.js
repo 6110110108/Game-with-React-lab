@@ -3,8 +3,8 @@ import _, { attempt } from 'lodash';
 import CharacterCard from './CharacterCard';
 
 
-var temp = 3; //
-var word = ""; //
+var temp = 3; 
+var word = ""; 
 var reload = 0;
 const prepareStateFromWord = given_word => {
     let word = given_word.toUpperCase()
@@ -13,7 +13,7 @@ const prepareStateFromWord = given_word => {
         word,
         chars,
         attempt: 1,
-        count: 3, //
+        count: 3, 
         guess: '', 
         complete: false 
     }
