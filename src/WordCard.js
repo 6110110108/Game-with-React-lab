@@ -28,8 +28,10 @@ export default function WordCard(props){
 
         if(guess.length == state.word.length) {
             if(guess == state.word) {
-                console.log('yeah!')
+                console.log('yeah!, the page will be restart')
                 setState({...state, completed: true})
+                window.location.reload(false);
+                //printFollowers("Nice")
             }
             else {
                 console.log('rest, next attempt')
@@ -48,3 +50,8 @@ export default function WordCard(props){
         </div>
     );
 }
+
+function printFollowers(followersSum) {
+    document.getElementById('App').innerHTML = followersSum;
+    console.log(followersSum); // you can do print followersSum wherever you want
+  }
