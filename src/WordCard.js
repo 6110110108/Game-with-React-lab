@@ -57,7 +57,7 @@ export default function WordCard(props){
         reload++;
         return (
             <div>
-                    <div id="Result">The word is: {word}</div>
+                    <div id="Result">The word is: {word} -- Click any letter the page will reload. --</div>
                     {
                     state.chars.map((c, i) => 
                         <CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>
